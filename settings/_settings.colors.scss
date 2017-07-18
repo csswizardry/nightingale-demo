@@ -1,0 +1,9 @@
+// ==========================================================================
+// #COLORS
+// ========================================================================== */
+
+// This file adds to and extends the predefined color palette found in
+// `nightingale/settings/_settings.{colors,definitions}.scss`.
+
+// Add more colours to our global map.
+$global-colors: map-merge($global-colors, ('green': #BADA55));
