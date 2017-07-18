@@ -54,6 +54,9 @@
  * Pagination...........Component for paging through items/views.
  * Tabs.................Tabbed content switcher.
  *
+ * MIDDLEWARE
+ * Submit...............Style Moodle’s submit button.
+ *
  * UTILITIES
  * Colors...............Utility classes generated from our color map.
  * Spacing..............Nudge layouts around with our spacing classes.
@@ -124,6 +127,12 @@
 @import "nightingale/components/forms/components.forms";
 @import "nightingale/components/pagination/components.pagination";
 @import "nightingale/components/tabs/components.tabs";
+
+
+
+
+
+@import "middleware/middleware.submit";
 
 
 
