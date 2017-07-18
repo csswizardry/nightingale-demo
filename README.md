@@ -2,7 +2,7 @@
 
 ```bash
 # Grab the demo project
-$ git clone git@github.com:csswizardry/nightingale-demo.git
+$ git clone https://github.com/csswizardry/nightingale-demo.git
 $ cd nightingale-demo
 # Install its dependencies
 $ npm install
