@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/csswizardry/nightingale-demo#readme",
   "dependencies": {
-    "nightingale": "git://github.com/NHSLeadership/nightingale.git#develop"
+    "nightingale": "git://github.com/NHSLeadership/nightingale.git#6fc072e4448757719fd07786c6c20af5b4bd73d0"
   },
   "scripts": {
     "build": "node_modules/.bin/node-sass main.scss --include-path node_modules/ --output-style expanded --precision 9 > ./dist/main.css",

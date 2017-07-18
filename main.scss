@@ -6,16 +6,10 @@
  * CONTENTS
  *
  * SETTINGS
- * Pre-config...........Predefinitions of variables to override Nightingale.
- * Definitions..........Define constants such as font-sizes, etc.
- * Colors...............Apply our colors against variables.
- * Colors...............Our own colour overrides.
- * Z-Index..............Set up an array of z-index values for developers to use.
+ * All..................Grab all of our settings files in one go.
  *
  * TOOLS
- * Functions............Simple functions to help us out with math, etc.
- * Mixins...............Basic, global mixins.
- * Sass MQ..............Elegant little mixins library.
+ * All..................Grab all of our tools files in one go.
  *
  * GENERIC
  * Box-sizing...........Better default box-sizing rules.
@@ -65,20 +59,18 @@
  * Z-Index..............A suite of stacking utility classes.
  * Display..............Show/hide/etc. utility classes.
  * Overrides............CSS to override/force new Nightingale styles.
+ * Hints................Helpful pointers to prevent developers misusing things.
  */
 
 @import "settings/settings.pre-config";
-@import "nightingale/settings/settings.definitions";
-@import "nightingale/settings/settings.colors";
+@import "nightingale/settings/all";
 @import "settings/settings.colors";
-@import "nightingale/settings/settings.z-index";
 
 
 
 
 
-@import "nightingale/tools/tools.functions";
-@import "nightingale/tools/tools.mixins";
+@import "nightingale/tools/all";
 @import "sass-mq/mq";
 
 
@@ -146,4 +138,5 @@
 @import "nightingale/utilities/utilities.widths";
 @import "nightingale/utilities/utilities.z-index";
 @import "nightingale/utilities/utilities.display";
+@import "nightingale/utilities/utilities.hints";
 @import "utilities/utilities.overrides";
