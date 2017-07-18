@@ -1,0 +1,19 @@
+// ==========================================================================
+// #PRE-CONFIG
+// ========================================================================== */
+
+// In this file, we are assigning new values to existing Nightingale variables
+// so as to override them. We can do this with any Nightingale variable that is
+// defined with a `!default` flag, but we must do it BEFORE, rather than after,
+// the framework’s assignment.
+
+// Different typographic settings, please.
+
+$global-font-size: 16px;
+$global-line-height: 24px;
+
+// Our assets live somewhere different…
+
+$asset-path: '/static/assets/';
+$font-path: '/static/assets/fonts/';
+$image-path: '/static/assets/img/';
