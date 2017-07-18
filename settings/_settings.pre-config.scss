@@ -15,5 +15,5 @@ $global-line-height: 24px;
 // Our assets live somewhere different…
 
 $asset-path: '/static/assets/';
-$font-path: '/static/assets/fonts/';
-$image-path: '/static/assets/img/';
+$font-path: '#{$asset-path}fonts/';
+$image-path: '#{$asset-path}img/';

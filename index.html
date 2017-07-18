@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en" id="jsPage" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+
+  <link rel="preload" href="./static/assets/fonts/0811514e-6660-4043-92c1-23d0b8caaa2f.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./static/assets/fonts/8c92eb68-ce37-4962-a9f4-5b47d336bd1c.woff2" as="font" type="font/woff2" crossorigin />
+
+  <title>Nightingale</title>
+
+  <link rel="stylesheet" href="./dist/main.css" />
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  <script>
+    (function(){
+      var page = document.getElementById('jsPage');
+      page.classList.remove('no-js');
+    }());
+  </script>
+
+  <style>
+
+    h2[id]::before,
+    h3[id]::before,
+    h4[id]::before,
+    h5[id]::before,
+    h6[id]::before {
+      content: "#";
+      display: inline-block;
+      text-align: center;
+      width: 1em;
+      margin-left: -1em;
+      opacity: 0;
+    }
+
+    h2[id]:hover::before,
+    h3[id]:hover::before,
+    h4[id]:hover::before,
+    h5[id]:hover::before,
+    h6[id]:hover::before,
+    h2[id]:target::before,
+    h3[id]:target::before,
+    h4[id]:target::before,
+    h5[id]:target::before,
+    h6[id]:target::before {
+      opacity: 0.25;
+    }
+
+    .c-color-grid {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+      .c-color-grid > li {
+        flex-grow: 1;
+        padding-top: 5.882352941%;
+        background: red;
+      }
+
+    .u-demo-grid {
+      text-align: center;
+      background-color: #ff8;
+    }
+
+    .u-demo-sprite {
+      padding: 15px;
+      background-color: #e8edee;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="c-ribbon  c-ribbon--expandable">
+
+    <div class="o-wrapper">
+
+      <details class="c-ribbon__body">
+        <summary><b>In partnership with:</b> NHS Health Education England – The Princess Alexandra Hospital NHS Trust – South Essex Partnership University NHS Foundation Trust – Virgin Health Care – Bupa – Simplyhealth – Pruhealth – Department of Health.</summary>
+      </details>
+
+    </div>
+
+  </div>
+
+  <div class="c-ribbon  c-ribbon--beta">
+
+    <div class="o-wrapper">
+
+      <strong class="c-ribbon__tag">Beta</strong>
+
+      <strong class="c-ribbon__body">This page is part of a new service – your <a href="#0">feedback</a> will help us to improve it.</strong>
+
+    </div>
+
+  </div>
+
+  <header class="c-page-header" id="jsPageHeader">
+
+    <div class="o-wrapper">
+
+      <img src="./static/assets/img/logo-nhs.png" alt="NHS" width="89" height="36" class="c-page-header__logo" />
+
+      <strong class="c-page-header__title"><img src="./static/assets/img/logo-sub.png" alt="Leadership Academy" width="241" height="25" /></strong>
+
+      <button class="c-nav-trigger" id="jsNavTrigger" aria-label="menu" data-expands="#jsNav">☰</button>
+
+      <nav class="c-nav-primary  c-page-header__nav" id="primaryNav">
+
+        <ul class="c-nav-primary__list" id="jsNav">
+
+          <li class="c-nav-primary__item">
+            <a href="#0" class="c-nav-primary__link">Item One</a>
+          </li>
+
+          <li class="c-nav-primary__item">
+            <a href="#0" class="c-nav-primary__link">Item Two</a>
+          </li>
+
+          <li class="c-nav-primary__item">
+            <a href="#0" class="c-nav-primary__link">Item Three</a>
+          </li>
+
+          <li class="c-nav-primary__item">
+            <button class="c-nav-primary__link" data-expands="#item-4-sub" data-popup>Sub Nav</button>
+
+            <nav class="c-nav-primary__sub  jsNavSub" id="item-4-sub" role="group" aria-label="sub navigation menu">
+
+              <div class="o-wrapper">
+
+                <div class="o-layout">
+                  <div class="o-layout__item  u-6/12@lg">
+
+                    <h4 class="u-margin-bottom-small">This is a new sub nav area</h4>
+
+                    <p class="u-margin-bottom-small"><small>Menu short description that introduces the user to the list
+                    within this dropdown menu.</small></p>
+
+                    <p class="u-margin-bottom-small">
+                      <a href="#0" class="c-btn  c-btn--primary  c-btn--full">Button</a>
+                    </p>
+
+                  </div><!-- /.o-layout__item -->
+                  <div class="o-layout__item  u-6/12@lg">
+
+                    <ul class="c-nav-primary__sub-links">
+                      <li>
+                        <a href="#0">Sub Link 1</a>
+                      </li>
+                      <li>
+                        <a href="#0">Sub Link 2</a>
+                      </li>
+                      <li>
+                        <a href="#0">Sub Link 3</a>
+                      </li>
+                      <li>
+                        <a href="#0">Sub Link 4</a>
+                      </li>
+                    </ul>
+
+                  </div><!-- /.o-layout__item -->
+                </div><!-- /.o-layout -->
+
+              </div><!-- /.o-wrapper -->
+
+            </nav>
+
+          </li>
+
+          <li class="c-nav-primary__item">
+            <a href="#0" class="c-nav-primary__link">Item Five</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <div class="o-wrapper">
+
+    <h1>Nightingale</h1>
+
+    <p>Welcome to the NHS Leadership Academy UI Toolkit and front-end
+    framework, codename <b>Nightingale</b>.</p>
+
+    <hr class="c-divider" />
+
+    <div class="o-layout  o-layout--wide">
+
+      <main class="o-layout__item  u-8/12@lg">
+
+        <h2 id="icons">Icons</h2>
+
+        <p class="u-demo-sprite">
+
+          <span class="c-sprite  c-sprite--dot"></span>
+          <span class="c-sprite  c-sprite--dot-inactive"></span>
+
+          <br />
+
+          <span class="c-sprite  c-sprite--new-window"></span>
+          <span class="c-sprite  c-sprite--new-window-rev"></span>
+
+          <br />
+
+          <span class="c-sprite  c-sprite--arrow-down"></span>
+          <span class="c-sprite  c-sprite--arrow-up"></span>
+          <span class="c-sprite  c-sprite--arrow-left"></span>
+          <span class="c-sprite  c-sprite--arrow-right"></span>
+          <span class="c-sprite  c-sprite--arrow-down-rev"></span>
+          <span class="c-sprite  c-sprite--arrow-up-rev"></span>
+          <span class="c-sprite  c-sprite--arrow-left-rev"></span>
+          <span class="c-sprite  c-sprite--arrow-right-rev"></span>
+
+          <br />
+
+          <span class="c-sprite  c-sprite--pencil"></span>
+          <span class="c-sprite  c-sprite--currency"></span>
+          <span class="c-sprite  c-sprite--speaker"></span>
+          <span class="c-sprite  c-sprite--info"></span>
+          <span class="c-sprite  c-sprite--user"></span>
+          <span class="c-sprite  c-sprite--menu"></span>
+          <span class="c-sprite  c-sprite--home"></span>
+          <span class="c-sprite  c-sprite--close"></span>
+          <span class="c-sprite  c-sprite--pencil-rev"></span>
+          <span class="c-sprite  c-sprite--currency-rev"></span>
+          <span class="c-sprite  c-sprite--speaker-rev"></span>
+          <span class="c-sprite  c-sprite--info-rev"></span>
+          <span class="c-sprite  c-sprite--user-rev"></span>
+          <span class="c-sprite  c-sprite--menu-rev"></span>
+          <span class="c-sprite  c-sprite--close-rev"></span>
+
+          <br />
+
+          <span class="c-sprite  c-sprite--prev-blue"></span>
+          <span class="c-sprite  c-sprite--next-blue"></span>
+
+          <span class="c-sprite  c-sprite--prev-grey"></span>
+          <span class="c-sprite  c-sprite--next-grey"></span>
+
+          <br />
+
+          <span class="c-sprite  c-sprite--close-large"></span>
+          <span class="c-sprite  c-sprite--hamburger"></span>
+          <span class="c-sprite  c-sprite--magnifying-glass"></span>
+          <span class="c-sprite  c-sprite--magnifying-glass-rev"></span>
+
+          <br />
+
+          <span class="c-sprite  c-sprite--facebook"></span>
+          <span class="c-sprite  c-sprite--twitter"></span>
+          <span class="c-sprite  c-sprite--linkedin"></span>
+
+          <br />
+
+          <span class="c-sprite  c-sprite--add"></span>
+          <span class="c-sprite  c-sprite--play"></span>
+
+        </p>
+
+        <hr class="c-divider" />
+
+        <h2 id="ribbons">Ribbons</h2>
+
+        <div class="c-ribbon  u-margin-bottom">
+
+          <div class="o-wrapper">
+
+            <div class="c-ribbon__actions">
+              <button class="c-sprite  c-sprite--close-rev">Close</button>
+            </div>
+
+            <strong class="c-ribbon__body">This website uses cookies.</strong>
+
+          </div>
+
+        </div>
+
+        <div class="c-ribbon  c-ribbon--live  u-margin-bottom">
+
+          <div class="o-wrapper">
+
+            <strong class="c-ribbon__tag">Live</strong>
+
+            <strong class="c-ribbon__body">Pellentesque habitant morbi tristique
+            senectus et netus et malesuada.</strong>
+
+          </div>
+
+        </div>
+
+        <div class="c-ribbon  c-ribbon--alpha  u-margin-bottom">
+
+          <div class="o-wrapper">
+
+            <strong class="c-ribbon__tag">Alpha</strong>
+
+            <strong class="c-ribbon__body">Pellentesque habitant morbi tristique
+            senectus et netus et malesuada.</strong>
+
+          </div>
+
+        </div>
+
+        <div class="c-ribbon  c-ribbon--beta  u-margin-bottom">
+
+          <div class="o-wrapper">
+
+            <strong class="c-ribbon__tag">Beta</strong>
+
+            <strong class="c-ribbon__body">Pellentesque habitant morbi tristique
+            senectus et netus et malesuada.</strong>
+
+          </div>
+
+        </div>
+
+        <div class="c-ribbon  c-ribbon--expandable  u-margin-bottom">
+
+          <div class="o-wrapper">
+
+            <details class="c-ribbon__body">
+              <summary><b>In partnership with:</b> NHS Health Education England – The Princess Alexandra Hospital NHS Trust – South Essex Partnership University NHS Foundation Trust – Virgin Health Care – Bupa – Simplyhealth – Pruhealth – Department of Health.</summary>
+            </details>
+
+          </div>
+
+        </div>
+
+        <hr class="c-divider" />
+
+        <h2 id="pagination">Pagination</h2>
+
+        <ol class="c-pagination">
+
+          <li class="c-pagination__item  c-pagination__prev">
+            <a href="#0" class="c-pagination__link"><span class="c-sprite  c-sprite--prev-blue">Prev Page</span></a>
+          </li>
+
+          <li class="c-pagination__item">
+            <a href="#0" class="c-pagination__link"><span class="u-hide-visually">Page</span> 1</a>
+          </li>
+          <li class="c-pagination__item">
+            <a href="#0" class="c-pagination__link"><span class="u-hide-visually">Page</span> 2</a>
+          </li>
+          <li class="c-pagination__item">
+            <a href="#0" class="c-pagination__link"><span class="u-hide-visually">Page</span> 3</a>
+          </li>
+          <li class="c-pagination__item">
+            <a href="#0" class="c-pagination__link  is-current"><span class="u-hide-visually">Page</span> 4</a>
+          </li>
+          <li class="c-pagination__item">
+            <a href="#0" class="c-pagination__link"><span class="u-hide-visually">Page</span> 5</a>
+          </li>
+          <li class="c-pagination__item">
+            <a href="#0" class="c-pagination__link"><span class="u-hide-visually">Page</span> 6</a>
+          </li>
+
+          <li class="c-pagination__item  c-pagination__next">
+            <a href="#0" class="c-pagination__link"><span class="c-sprite  c-sprite--next-blue">Next Page</span></a>
+          </li>
+
+        </ol>
+
+        <hr class="c-divider" />
+
+        <ol class="c-pagination">
+
+          <li class="c-pagination__item  c-pagination__prev">
+            <a href="#0" class="c-pagination__link  is-current"><span class="c-sprite c-sprite--prev-grey">Prev Page</span></a>
+          </li>
+
+          <li class="c-pagination__item  c-pagination__next">
+            <a href="#0" class="c-pagination__link"><span class="c-sprite  c-sprite--next-blue">Next Page</span></a>
+          </li>
+
+        </ol>
+
+        <hr class="c-divider" />
+
+        <h2 id="forms">Forms</h2>
+
+        <form>
+
+          <ul class="c-form-list">
+
+            <li>
+              <label for="title">
+                Title
+                <small>Copy for brief explanation of label request, which can
+                  span two lines maximum.</small>
+              </label>
+              <div class="c-form-dropdown">
+                <select class="c-form-dropdown__select  c-form-input" id="title">
+                  <option>Miss.</option>
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Ms.</option>
+                </select>
+              </div>
+            </li>
+
+            <li>
+              <label for="name">
+                Full Name
+              </label>
+              <input type="text" class="c-form-input" id="name" placeholder="Jane Smith" />
+            </li>
+
+            <li>
+              <label for="email">
+                Email
+              </label>
+              <input type="email" class="c-form-input  is-error" id="email" placeholder="name@domain.com" value="jane@gmail.com" />
+              <details class="c-form-error">
+                <summary>Email not recognised</summary>
+                <div>
+                  Yikes! It looks like this email is not recognised.
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <label for="url">
+                Website
+              </label>
+              <input type="text" class="c-form-input" id="url" placeholder="http://" />
+            </li>
+
+            <li>
+              <label for="twitter">
+                Twitter Handle
+              </label>
+              <input type="text" class="c-form-input" id="twitter" value="@" />
+            </li>
+
+            <li>
+              <label for="comments">
+                Comments
+              </label>
+              <textarea rows="5" cols="50" class="c-form-input" id="comments"></textarea>
+            </li>
+
+            <li>
+
+              <strong class="c-form-label">How would you prefer to be contacted?</strong>
+
+              <label class="c-form-checkbox">
+                <input type="checkbox" class="c-form-checkbox__input" />
+                <span class="c-form-checkbox__faux"></span>
+                Email
+              </label>
+
+              <label class="c-form-checkbox">
+                <input type="checkbox" class="c-form-checkbox__input" checked />
+                <span class="c-form-checkbox__faux"></span>
+                Phone
+              </label>
+
+              <label class="c-form-checkbox">
+                <input type="checkbox" class="c-form-checkbox__input" />
+                <span class="c-form-checkbox__faux"></span>
+                Post
+              </label>
+
+            </li>
+
+            <li>
+
+              <strong class="c-form-label">How would you prefer to be contacted?</strong>
+
+              <label class="c-form-checkbox  c-form-checkbox--radio">
+                <input type="radio" class="c-form-checkbox__input" checked name="options" />
+                <span class="c-form-checkbox__faux"></span>
+                Email
+              </label>
+
+              <label class="c-form-checkbox  c-form-checkbox--radio">
+                <input type="radio" class="c-form-checkbox__input" name="options" />
+                <span class="c-form-checkbox__faux"></span>
+                Phone
+              </label>
+
+              <label class="c-form-checkbox  c-form-checkbox--radio">
+                <input type="radio" class="c-form-checkbox__input" name="options" />
+                <span class="c-form-checkbox__faux"></span>
+                Post
+              </label>
+
+            </li>
+
+            <li>
+              <button class="c-btn  c-btn--submit">Submit</button>
+            </li>
+
+          </ul>
+
+        </form>
+
+        <hr class="c-divider" />
+
+        <h2 id="headings">Headings</h2>
+
+        <h1>Heading Level 1</h1>
+
+        <h2>Heading Level 2</h2>
+
+        <h3>Heading Level 3</h3>
+
+        <h4>Heading Level 4</h4>
+
+        <h5>Heading Level 5</h5>
+
+        <h6>Heading Level 6</h6>
+
+        <h1><a href="#0">Heading Level Link 1</a></h1>
+
+        <h2><a href="#0">Heading Level Link 2</a></h2>
+
+        <h3><a href="#0">Heading Level Link 3</a></h3>
+
+        <h4><a href="#0">Heading Level Link 4</a></h4>
+
+        <h5><a href="#0">Heading Level Link 5</a></h5>
+
+        <h6><a href="#0">Heading Level Link 6</a></h6>
+
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. <a href="#0">Vestibulum tortor quam</a>,
+        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+        sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+        placerat eleifend leo.</p>
+
+        <hr class="c-divider" />
+
+        <h2 id="colours">Colours</h2>
+
+        <ul class="c-color-grid">
+          <li class="u-color-bg-attention"></li>
+          <li class="u-color-bg-error"></li>
+          <li class="u-color-bg-information"></li>
+          <li class="u-color-bg-nhs-aqua"></li>
+          <li class="u-color-bg-nhs-black"></li>
+          <li class="u-color-bg-nhs-blue"></li>
+          <li class="u-color-bg-nhs-grey-dark"></li>
+          <li class="u-color-bg-nhs-grey-mid"></li>
+          <li class="u-color-bg-nhs-grey-pale"></li>
+          <li class="u-color-bg-nhs-orange"></li>
+          <li class="u-color-bg-nhs-pink"></li>
+          <li class="u-color-bg-nhs-purple"></li>
+          <li class="u-color-bg-nhs-purple-light"></li>
+          <li class="u-color-bg-pending"></li>
+          <li class="u-color-bg-success"></li>
+          <li class="u-color-bg-warning"></li>
+          <li class="u-color-bg-white"></li>
+        </ul>
+
+        <hr class="c-divider" />
+
+        <h2 id="buttons">Buttons</h2>
+
+        <p>
+          <a href="#0" class="c-btn  c-btn--submit">Click me!</a>
+          <a href="#0" class="c-btn  c-btn--primary">Click me!</a>
+          <a href="#0" class="c-btn  c-btn--secondary">Click me!</a>
+        </p>
+
+        <p>
+          <a href="#0" class="c-btn  c-btn--submit  is-disabled">Click me!</a>
+          <a href="#0" class="c-btn  c-btn--primary  is-disabled">Click me!</a>
+          <a href="#0" class="c-btn  c-btn--secondary  is-disabled">Click me!</a>
+        </p>
+
+        <p><a href="#0" class="c-btn  c-btn--full  c-btn--submit">Click me!</a></p>
+        <p><a href="#0" class="c-btn  c-btn--full  c-btn--primary">Click me!</a></p>
+        <p><a href="#0" class="c-btn  c-btn--full  c-btn--secondary">Click me!</a></p>
+
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+          <a href="#k">fames ac turpis egestas</a>. <q>Vestibulum tortor quam,
+        feugiat vitae</q>, ultricies eget, tempor sit amet, ante. Donec eu libero
+        sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+        eleifend leo.</p>
+
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+
+        <ol>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ol>
+
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+        eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+      </main><!-- /.o-layout__item -->
+
+
+
+
+
+      <div class="o-layout__item  u-4/12@lg">
+
+        <h2 id="progress">Progress</h2>
+
+        <p class="c-progress-wheel" data-percent="33">
+          <b class="c-progress-wheel__text">33%</b>
+        </p>
+
+        <div class="c-progress-bar">
+
+          <h3 class="c-progress-bar__title">
+            <b class="c-progress-bar__%">75</b>% complete
+          </h3>
+
+          <div class="c-progress-bar__bar">
+            <span class="c-progress-bar__fill" style="left: -25%;"></span>
+          </div>
+
+          <h3 class="c-progress-bar__title-sub">5 units left</h3>
+
+          <p>Next up: Why does leadership matter?</p>
+
+        </div>
+
+        <hr class="c-divider" />
+
+        <h2 id="spinners">Spinners</h2>
+
+        <p>
+          <strong class="c-spinner">Loading…</strong>
+          <strong class="c-spinner  c-spinner--inverse">Loading…</strong>
+        </p>
+
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada <a
+          href="#u" target="_blank">fames ac turpis egestas</a>. <q>Vestibulum
+          tortor quam, feugiat vitae</q>, ultricies eget, tempor sit amet, ante.
+        Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+        Mauris placerat eleifend leo.</p>
+
+        <hr class="c-divider" />
+
+        <h2 id="quotes">Quotes</h2>
+
+        <blockquote>
+          <p>Pellentesque habitant morbi tristique senectus et netus et
+          malesuada.</p>
+        </blockquote>
+
+        <hr class="c-divider" />
+
+        <h2 id="reveal">Reveal</h2>
+
+        <details open>
+          <summary>Expandable Content – Open by Default</summary>
+
+          <div>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+            leo.</p>
+          </div>
+
+        </details>
+
+        <details>
+          <summary>Expandable Content – Closed by Default</summary>
+
+          <div>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+            leo.</p>
+          </div>
+
+        </details>
+
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+        eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+      </div>
+
+    </div><!-- /.o-layout -->
+
+  </div><!-- /.o-wrapper -->
+
+  <footer class="c-page-footer">
+
+    <div class="o-wrapper">
+
+      <div class="o-layout">
+
+        <div class="o-layout__item  u-4/12@lg">
+
+          <h4>Footer Title</h4>
+
+          <ul class="o-list-bare">
+            <li><a href="#0">Item 1</a></li>
+            <li><a href="#1">Item 2</a></li>
+            <li><a href="#0">Item 3</a></li>
+            <li><a href="#0">Item 4</a></li>
+            <li><a href="#0">Item 5</a></li>
+          </ul>
+
+        </div>
+
+        <div class="o-layout__item  u-4/12@lg">
+
+          <h4>Footer Title</h4>
+
+          <ul class="o-list-bare">
+            <li><a href="#0">Item 1</a></li>
+            <li><a href="#4">Item 2</a></li>
+            <li><a href="#1">Item 3</a></li>
+            <li><a href="#0">Item 4</a></li>
+            <li><a href="#9">Item 5</a></li>
+          </ul>
+
+        </div>
+
+        <div class="o-layout__item  u-4/12@lg">
+
+          <h4>Footer Title</h4>
+
+          <ul class="o-list-bare">
+            <li><a href="#7">Item 1</a></li>
+            <li><a href="#0">Item 2</a></li>
+            <li><a href="#0">Item 3</a></li>
+            <li><a href="#0">Item 4</a></li>
+            <li><a href="#0">Item 5</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <hr class="c-divider" />
+
+      <p><small>Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+        vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
+        quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+        eleifend leo.</small></p>
+
+    </div>
+
+  </footer>
+  <script>
+
+    (function() {
+
+      var setupToggles = function() {
+        if (window.innerWidth > 720) {
+          // Get all the submenus
+          var submenus = document.querySelectorAll('.jsNavSub')
+
+          Array.prototype.forEach.call(submenus, function(submenu) {
+            var clone = submenu.cloneNode(true)
+            var wrapper = document.getElementById('jsPageHeader')
+            wrapper.appendChild(clone)
+            submenu.parentNode.removeChild(submenu)
+          })
+        }
+      }
+
+      setupToggles()
+
+      function getDisplayMode(target) {
+        var displayMode = target.currentStyle ? target.currentStyle.display : window.getComputedStyle(target, null).display
+        return displayMode
+      }
+
+      function toggle(toggleButton, target, popupMode, displayMode) {
+        var expanded = toggleButton.getAttribute('aria-expanded') === 'true'
+        expanded = !expanded
+        toggleButton.setAttribute('aria-expanded', expanded)
+        target.style.display = target.style.display === 'none' ? displayMode : 'none'
+
+        // Get header class value
+        var header = document.getElementById('jsPageHeader')
+        var headerClasses = header.getAttribute('class')
+
+        // Do header class
+        // if it's a submenu that's been opened
+        if (expanded && target.getAttribute('aria-label') === 'submenu') {
+          header.setAttribute('class', headerClasses + ' has-sub-nav')
+        } else {
+          header.setAttribute('class', headerClasses.replace(' has-sub-nav', ''))
+        }
+
+        if (expanded && popupMode) {
+          // Get the first and last focusable elements
+          var first = target.querySelector('a[href], button, input, textarea, select, [tabindex="0"]')
+          var all = target.querySelectorAll('a[href], button, input, textarea, select, [tabindex="0"]')
+          var last = all[all.length - 1]
+
+          // Focus the first focusable elem
+          first.focus()
+
+          // Refocus `toggleButton` if the user
+          // presses Shift + Tab on first focusable elem
+          first.addEventListener('keydown', function(e) {
+            var key = 'which' in e ? e.which : e.keyCode;
+            if (key === 9 && e.shiftKey) {
+              e.preventDefault()
+              toggleButton.focus()
+            }
+          })
+
+          // Refocus `toggleButton` if the user
+          // presses Tab on last focusable elem
+          last.addEventListener('keydown', function(e) {
+            var key = 'which' in e ? e.which : e.keyCode;
+            if (key === 9 && !e.shiftKey) {
+              e.preventDefault()
+              toggleButton.focus()
+            }
+          })
+        }
+      }
+
+      // Get all the toggle button nodes in the document
+      var toggleButtons = document.querySelectorAll('[data-expands]')
+
+      // Iterate over those buttons
+      Array.prototype.forEach.call(toggleButtons, function(toggleButton) {
+        // Give the element the button role
+        toggleButton.setAttribute('role', 'button')
+
+        // Set the aria-expanded value to false to begin with
+        toggleButton.setAttribute('aria-expanded', 'false')
+
+        // Define the target element via the selector supplied
+        // as the `data-expands` value
+        var target = document.querySelector(toggleButton.getAttribute('data-expands'))
+
+        // If it has `data-popup` give it `aria-haspopup`
+        // and set it to popupMode
+        if (toggleButton.getAttribute('data-popup') !== null) {
+          toggleButton.setAttribute('aria-haspopup', 'true')
+          var popupMode = true
+
+          // Give the target the right semantics too
+          target.setAttribute('role', 'group')
+          target.setAttribute('aria-label', 'submenu')
+        }
+
+        // Get and set displayMode
+        var displayMode = getDisplayMode(target)
+        if (displayMode === 'none') {
+          target.style.display = 'none'
+          displayMode = 'block'
+        }
+
+        toggleButton.addEventListener('click', function() {
+          // Do the toggling
+          toggle(toggleButton, target, popupMode, displayMode)
+        })
+
+        // Close menu on outside click
+        document.addEventListener('click', function(e) {
+          if ((!target.contains(e.target) && toggleButton !== e.target) && toggleButton.getAttribute('aria-expanded') === 'true') {
+            toggleButton.click()
+          }
+        })
+      })
+
+      // Hamburger menu text node toggle
+      var navTrigger = document.getElementById('jsNavTrigger');
+      navTrigger.addEventListener('click', function() {
+        this.innerHTML = this.innerHTML === '×' ? '☰' : '×'
+      })
+    })()
+  </script>
+
+<script>
+    var headings = document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]");
+
+    for (var i = 0; i < headings.length; i++) {
+      headings[i].innerHTML =
+        '<a href="#' + headings[i].id + '">' +
+        headings[i].innerText +
+        '</a>';
+    }
+</script>
+
+</body>
+</html>
