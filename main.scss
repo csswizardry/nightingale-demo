@@ -48,6 +48,7 @@
  * Pagination...........Component for paging through items/views.
  * Tabs.................Tabbed content switcher.
  * Sprite...............Icon spriting component
+ * Panels...............Panel component
  *
  * MIDDLEWARE
  * Submit...............Style Moodle’s submit button.
@@ -122,6 +123,7 @@
 @import "nightingale/components/pagination/components.pagination";
 @import "nightingale/components/tabs/components.tabs";
 @import "nightingale/components/sprite/components.sprite";
+@import "components/panels/components.panels";
 
 
 

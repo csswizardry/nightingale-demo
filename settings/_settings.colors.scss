@@ -7,3 +7,5 @@
 
 // Add more colours to our global map.
 $global-colors: map-merge($global-colors, ('green': #BADA55));
+
+$color-panel-border: color(nhs-purple);

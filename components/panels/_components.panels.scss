@@ -1,0 +1,24 @@
+/* ==========================================================================
+   #PANELS
+   ========================================================================== */
+
+/**
+ * The panels area can be used to create panels anywhere in the site with an image,
+ * text, progress bar, description & CTA buttons on it
+ */
+
+.c-panel {
+  border: 4px solid $color-panel-border;
+}
+
+.c-panel__logo {
+  margin-bottom: $global-spacing-unit + $global-border-mid;
+}
+
+.c-panel-content {
+  padding: $global-spacing-unit-small;
+}
+
+.c-btn--panel {
+  background-color: color(nhs-blue);
+}
