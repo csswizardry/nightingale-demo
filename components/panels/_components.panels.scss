@@ -1,0 +1,40 @@
+/* ==========================================================================
+   #Panels
+   ========================================================================== */
+
+/**
+ * Long-form comment.
+ *
+ * If you’d like to create a new Sass file for the project, simply copy and
+ * paste this one and fill it in like for like.
+ *
+ * This spans multiple lines and is also constrained to no longer than 80
+ * characters in width.
+ *
+ * 1. Provide line comments like this.
+ */
+
+.c-panel {
+	border: 5px solid color(nhs-purple);
+	padding: 10px 10px ;
+	
+}
+
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  font-weight: bold;
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  text-decoration: none;
+  padding: 4px $global-spacing-unit-large; /* [6] */
+  border: 1px solid transparent;
+
+  &:focus {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) inset;
+    border-color: #fff;
+  }
+
+}
