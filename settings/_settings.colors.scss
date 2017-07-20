@@ -6,4 +6,7 @@
 // `nightingale/settings/_settings.{colors,definitions}.scss`.
 
 // Add more colours to our global map.
-$global-colors: map-merge($global-colors, ('green': #BADA55));
+//$global-colors: map-merge($global-colors, ('green': #BADA55));
+
+$color-panel-border: color(nhs-purple);
+$color-panel-overlay: color(nhs-purple);

@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #PANEL
+   ========================================================================== */
+
+/**
+ * Creates a panel that can have an image, progress, related information
+ * and option buttons.
+ *
+ * 1.Allow the color to be changed.
+ */
+
+.c-panel {
+   border: 1px solid $color-panel-border /* [1] */
+}
+
+  .c-panel__image {
+
+  }
+
+.c-panel--modifier {
+
+}
